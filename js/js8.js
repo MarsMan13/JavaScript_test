@@ -1,19 +1,11 @@
-var now = new Date();
-var nowMonth = now.getMonth();
-var nowDate = now.getDate();
-var nowDay = now.getDay();
+var arr = new Array("a", "b", "c", "d", "e", "f");
+var result;
 
-document.write("<h2>오늘의 날짜 정보</h2>");
-document.write("현재 월: "+(Number(nowMonth)+1), "<br>");
-document.write("현재 일: "+nowDate, "<br>");
-document.write("현재 요일: "+nowDay, "<br>");
+result = arr.slice(1,6);
 
-var worldcup = new Date(2002,4,31);
-var theMonth = worldcup.getMonth();
-var theDate = worldcup.getDate();
-var theDay = worldcup.getDay();
+document.write(result, "<br>");
 
-document.write("<h2>월드컵 날짜 정보</h2>");
-document.write("2002월드컵 몇 월: "+ theMonth, "<br>");
-document.write("2002월드컵 몇 일: "+ theDate, "<br>");
-document.write("2002월드컵 무슨 요일: "+ theDay, "<br>");
+result = arr.splice(1,2,"x", "XX");
+
+document.write(result, "<br>");
+document.write(result, "<br>");
