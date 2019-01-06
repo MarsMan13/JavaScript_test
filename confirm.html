@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function def()
+        {
+            if(confirm('Ok?'))
+            {
+                alert('Ok');
+            }
+            else
+            {
+                alert('Nope');
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Login" onclick="def()" /> 
+    <script>
+        function def()
+        {
+            var codename = prompt('Enter the CodeName :');
+            if(codename == '007')
+            {
+                alert('Ok. Welcome, Mr. '+codename);
+            }
+            else
+            {
+                alert('System Down');
+            }
+        }
+    </script>
+</body>
+</html>

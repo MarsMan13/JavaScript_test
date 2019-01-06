@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        input[type=button]
+        {
+            width:50px;
+            background-color:#1e1e1e;
+            color:#1e1e1e;
+            text-shadow:-0.5px 0 #fefefe, 0.5px 0 #fefefe;
+            box-shadow:none;
+            box-decoration-break:unset;
+            border:none;
+        }
+        input[type=button]:hover{
+            border: solid 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="c1">Red</li>
+        <li class="c1">Blue</li>
+        <li class="yello">Yello</li>
+    </ul>
+    <input type="button" onclick="def2()" value="red" />
+    <br />
+    <input type="button" onclick="def1()" value="blue" />
+    <br />
+    <input type="button" onclick="def3()" value="yello" />
+    <br />
+    <input type="button" onclick="def4()" value="reset" />
+
+    <script>
+        function def1()
+        {
+            var ul = document.getElementsByTagName('ul')[0];
+            var list1 = ul.getElementsByTagName('li');
+            list1[1].style.color = 'blue';
+        }
+
+        function def2()
+        {
+            var list2 = document.getElementsByClassName('c1');
+            for(var i=0; i<1; i++)
+            {
+                list2[i].style.color = "tomato";
+            }
+        }
+
+        function def3()
+        {
+            var list3 = document.querySelector('.yello');
+            list3.style.color = "yello";
+        }
+
+        function def4()
+        {
+            var list4 = document.querySelectorAll('li');
+            for(var name in list4)
+            {
+                list4[name].style.color = 'black';
+            }
+        }
+        </script>
+</body>
+</html>
