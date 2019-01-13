@@ -11,7 +11,7 @@
     alert(cal("plus")(2, 1));
     alert(cal("minus")(2, 1));
     
-}())
+}());
 
 (function(){
     var ary = [
@@ -25,4 +25,4 @@
         alert(input);
     }
     
-}())
+}());
