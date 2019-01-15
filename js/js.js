@@ -1,2 +1,4 @@
-console.log(decodeURI("?query=%EA%B0%91"));
-console.log(encodeURI("?query=값"));
+var target = document.getElementsByTagName('li');
+console.log(target.construct.name);
+
+//console.log($('li').construct.name);
