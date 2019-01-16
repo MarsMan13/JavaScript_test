@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>memberListExercise</title>
+</head>
+<body>
+   <div>
+       <h3>Member list of teamToTo</h3>
+        <ul id="members">
+            <li>choiGun</li>
+        </ul>
+        <form action="">
+            <input type="text" id="input_text" placeholder="Enter the member name">
+            <input type="button" value="add" onclick="def1();">
+            <input type="button" value="delete" onclick="def2();">
+        </form>
+    </div>
+    
+    <script>
+        
+        
+        function def1(){
+            var memberList = document.getElementById('members');
+            var text = document.getElementById('input_text').value;
+            console.log(text);
+            var newList = document.createElement('li');
+            newList.append(text);
+            
+            memberList.append(newList);
+        }
+        
+        function def2(){
+            var memberList = document.getElementById('members');
+            console.log(memberList);
+            var text = document.getElementById('input_text').value;
+            console.log(text);
+            var memberListChild = memberList.childNodes;
+            
+            for(i = 0;i < memberListChild.length; i++){
+                if((memberListChild[i].nodeType == 1) && (memberListChild[i].firstChild.nodeValue == text)){
+                    var target = memberListChild[i].firstChild;
+                    target.parentNode.parentNode.removeChild(target.parentNode);
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>
