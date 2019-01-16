@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test8</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li id="target">JavaScript</li>
+    </ul>
+    <input type="button" onclick="deff();" value="replaceChild()"/>
+    
+    <script>
+        
+        function deff(){
+            var a = document.createElement('a');
+            a.setAttribute('href', "https://www.naver.com");
+            a.appendChild(document.createTextNode("NAVER"));
+            
+            var target = document.getElementById('target');
+            target.replaceChild(a, target.firstChild);
+        }        
+    </script>
+    
+</body>
+</html>
