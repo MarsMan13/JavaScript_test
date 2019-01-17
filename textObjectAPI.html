@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test10</title>
+    <script src="jquery/jquery.js"></script>
+</head>
+<body>
+    <h2 id="target">Coding everybody!</h2>
+    <p>
+    data : <input type="text" id="dataArea" >
+    </p>
+    <p>
+    start : <input type="text" id="start">    
+    </p>
+    <p>
+    end : <input type="text" id="end">
+    </p>
+    
+    <p>
+        <input type="button" value="appendData(data)" onclick="callAppendData()">
+        <input type="button" value="deleteData(start, end)" onclick="callDeleteData()">
+        <input type="button" value="insertData(start, data)" onclick="callInsertData()">
+        <input type="button" value="replaceData(start, end, data)" onclick="callreplaceData()">
+        <input type="button" value="substringData(start, end)" onclick="callsubstringData()">
+    </p>
+    
+    <script>
+        var target = document.getElementById('target').firstChild;
+        var data = document.getElementById('dataArea');
+        var start= document.getElementById('start');
+        var end= document.getElementById('end');
+        
+        function callAppendData(){
+            target.appendData(data.value);
+        }
+        
+    </script>
+</body>
+</html>
