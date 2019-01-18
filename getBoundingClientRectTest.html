@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getBoundingClientRect</title>
+    <style>
+        #target{
+            border: 20px solid blue;
+            padding :0;
+            height: 20000px;
+            width: 20000px;
+            margin: 100px;
+            
+        }
+        body{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+   <div id ="target">
+       Coding
+   </div>
+    
+    
+    <script>
+        var t = document.getElementById('target');
+        
+        var looping = setInterval(function(){
+            console.log('getBoundingClientRect : ', t.getBoundingClientRect().top, 'pageYOffset: ', window.pageYOffset);
+            console.log('getBoundingClientRect : ', t.getBoundingClientRect().left, 'pageXOffset: ', window.pageXOffset);
+            console.log('-------');
+        }, 1000);
+        
+        var looping2 = setInterval(function(){
+            window.scrollTo(0,0);
+        }, 1);
+        
+    </script>
+</body>
+</html>
