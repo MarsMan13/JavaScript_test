@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formEventType</title>
+</head>
+<body>
+   <p id="ppap">nothing</p>
+    <form action="#">
+       <input type="text" id="text_input">
+       <input type="submit" id="submit_input">
+    </form>
+    
+    <script>
+       
+        document.getElementById('text_input').addEventListener('change', function(event){
+            var text = document.getElementById("text_input").value;
+            document.getElementById("ppap").innerText=text;
+            if(text == ""){
+                document.getElementById("ppap").innerText = 'nothing';
+            }
+        });
+        
+        document.getElementsByTagName('form')[0].addEventListener('submit', function(event){
+            var text = document.getElementById("text_input").value;
+            console.log("check");
+            console.log(text == "");
+            if(text == ""){
+                alert('입력 해주세요');
+                event.preventDefault();
+            }
+        });
+        
+        document.getElementById("text_input").addEventListener('focus', function(event){
+            alert('focused');
+            document.getElementById("text_input").blur();
+        });
+        
+        
+        
+    </script>
+    
+    
+</body>
+</html>
