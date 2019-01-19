@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryEvent</title>
+    <script src="jquery/jquery.js"></script>
+</head>
+<body>
+   
+    <input type="text" id="text_box">
+   <p id="target"></p> 
+    <script>
+        var def = function(event){
+            $('#target').text(event.type);
+        }
+        var target = document.getElementById("target");
+        
+        //1) $('#text_box').on('focus blur', def);
+        
+        //2)$('#text_box').on({
+        //    'focus':def,
+        //    'blur':def,
+        //});
+        
+        
+        //3)
+        $('#text_box').on('focus', def).on('blur', def);
+    </script>
+</body>
+</html>

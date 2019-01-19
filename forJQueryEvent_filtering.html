@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event2</title>
+    <script src="jquery/jquery.js"></script>
+</head>
+<body>
+    <ul id="target">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <input type="button" id="button1" value="button">
+    <script>
+        $('ul').on('mouseover', '#new_element', function(event){
+            this.style.color = "red";
+        })
+        $('#button1').on('click', function(event){
+            var target = document.getElementById("target");
+            console.log(target);
+            target.innerHTML+='<li id="new_element">jQuery</li>';
+        })
+        
+    </script>
+</body>
+</html>

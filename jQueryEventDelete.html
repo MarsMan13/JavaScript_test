@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryEvent</title>
+    <script src="jquery/jquery.js"></script>
+</head>
+<body>
+   
+    <input type="text" id="text_box">
+    <p id="target"></p> 
+    <input type="button" id="button1" value="button">
+    
+    <script>
+        var def = function(event){
+            $('#target').text(event.type);
+        }
+        var target = document.getElementById("target");
+        
+        //1) $('#text_box').on('focus blur', def);
+        
+        //2)$('#text_box').on({
+        //    'focus':def,
+        //    'blur':def,
+        //});
+        
+        
+        //3)
+        $('#text_box').on('focus', def).on('focus', function(){console.log('1');}).on('blur', def);
+        
+        $('#button1').on('click', function(event){
+            console.log("check");
+            //$('#text_box').off('focus');
+            $('#text_box').off('focus', def);
+        })
+    </script>
+</body>
+</html>
