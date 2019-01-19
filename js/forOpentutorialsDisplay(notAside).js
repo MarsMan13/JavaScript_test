@@ -1,4 +1,4 @@
-
+/////////////////////////left= "100px"; <-- use it for absolute position;
 //
 var targets = $('a', 'aside');
 var href = [];
@@ -67,3 +67,5 @@ for(var i = 0; i<Iframe.length; i++){
     Iframe[i].style.position = "relative";
     Iframe[i].style.left="-50px";
 }
+
+scrollTo(0, 500); //y- soft coding needed
