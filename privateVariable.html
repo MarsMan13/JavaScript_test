@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>privateVariable</title>
+</head>
+<body>
+    <script>
+        function factory_movie(title){
+            return{
+                get_title : function(){
+                    return title;
+                },
+                set_title : function(_title){
+                    title = _title;
+                }
+            }
+        }
+    
+    
+    </script>
+</body>
+</html>
