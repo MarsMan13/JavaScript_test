@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InheritanceEx</title>
+</head>
+<body>
+    <script>
+        function Person(name){
+            this.name2 = name;
+        }
+        Person.prototype.name = null;
+        Person.prototype.introduce = function(){
+            return 'My name is' + this.name;
+        }
+        
+        function Programmer(name){
+            this.name = name;
+        }
+        Programmer.prototype = new Person();
+        
+        var p1 = new Programmer('egoing');
+        document.write(p1.name+"<br>");
+        
+    </script>
+    
+</body>
+</html>
