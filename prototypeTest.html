@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prototypeTest</title>
+</head>
+<body>
+    <script>
+        function Person(name, age){
+            this.name = name;
+            this.age =age;
+        }
+        Person.prototype.introduce = function(){
+            console.log("My name is "+this.name);
+        }
+        
+        
+        function Programmer(){
+            this.coding = function(){
+                console.log("I can code up");
+            }
+        }
+        
+        Programmer.prototype = new Person("XX", 19);
+        
+        
+    </script>
+</body>
+</html>
