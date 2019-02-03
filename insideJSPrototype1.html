@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype1</title>
+</head>
+<body>
+    <script>
+        
+        var person = {
+            name: "choiGun",
+            getName : function(){
+                return this.name;
+            },
+            setName : function(arg){
+                this.name = arg;
+            },
+        }
+        
+        function create_object(objec){
+            function F(){}
+            F.prototype = objec;
+            return new F();
+        }
+        
+        
+        
+    </script>
+</body>
+</html>
