@@ -3,39 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <title>test12</title>
-    <script src="https:////code.jquery.com/jquery-3.3.1.min.js
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js
 "></script>
+    <style>
+        a{
+            display:block;
+        }
+        #target6{
+            position: relative;
+            height: 400px;
+            width: 400px;
+            border: 1px solid gray;
+        }
+        #target5{
+            height: 200px;
+            width: 200px;
+            background: tomato;
+            padding:20px;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        body{
+            overflow-y: auto;
+            overflow-x: auto;
+            max-width: 500px;
+        }
+    </style>
 </head>
+
 <body>
-   <ul id="target1">
-       <li>a</li>
-       <li>b</li>
-       <li>c</li>
-       <li>d</li>
-       <li>e</li>
-   </ul>
+    <a href="https://www.naver.com">https://www.naver.com</a>
+    <a href="https://www.naver.kr">https://www.naver.kr</a>
+    <a href="http://www.naver.jp">http://www.naver.jp</a>
+    <a href="http://www.naver.uk">http://www.naver.uk</a>
+
+    <hr>
+
+    <input type="text">
+
+    <input type="email">
+
+    <label for="target3">target3</label>
+    <input id="target3" type="checkbox">
+
+    <hr>
+
+    <ul id="target1" class="target1">
+        <li>a</li>
+        <li>b</li>
+
+        <ul id="target2">
+            <li>aa</li>
+            <li>bb</li>
+            <li>cc</li>
+            <li>dd</li>
+        </ul>
+
+    </ul>
+    
+    <hr>
+    
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores at optio quisquam. Vel molestias blanditiis provident perferendis mollitia aliquid, consequuntur a dolorum unde nam autem necessitatibus suscipit, dolore animi nemo.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores at optio quisquam. Vel molestias blanditiis provident perferendis mollitia aliquid, consequuntur a dolorum unde nam autem necessitatibus suscipit, dolore animi nemo.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores at optio quisquam. Vel molestias blanditiis provident perferendis mollitia aliquid, consequuntur a dolorum unde nam autem necessitatibus suscipit, dolore animi nemo.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores at optio quisquam. Vel molestias blanditiis provident perferendis mollitia aliquid, consequuntur a dolorum unde nam autem necessitatibus suscipit, dolore animi nemo.
+    </p>
+    <hr>
+    <div id="target6">
+        <div id="target5" >
+            target5
+        </div>
+    </div>
+
     <script>
-        var arr = [1,2,3,4,5,6,7,8,9];
-        var obj1 = [
-            {
-                "area":"서울",
-                "name":"무대리",
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var obj1 = [{
+                "area": "서울",
+                "name": "무대리",
             },
             {
-                "area":"부산",
-                "name":"홍과장",
+                "area": "부산",
+                "name": "홍과장",
             },
             {
-                "area":"대전",
-                "name":"박사장",
+                "area": "대전",
+                "name": "박사장",
             },
             {
-                "area":"서울",
-                "name":"빅마마",
+                "area": "서울",
+                "name": "빅마마",
             },
         ]
-        
-        
     </script>
 </body>
 </html>
