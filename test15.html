@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test15</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js">
+    </script>
+    <script>
+        $(function(){
+            
+            $('#btn2').mouseenter(
+            function(){
+                $('#target2').css('color', 'tomato');
+                $('#target1').css('color', 'tomato');
+            });
+            
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btn1" type="button">Btn1</button>
+    <button id="btn2" type="button">Btn2</button>
+
+    <p id="target1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque expedita ipsum asperiores neque dolore earum quidem quibusdam beatae maiores praesentium rem labore fugiat repellendus architecto, perspiciatis iure vitae quis voluptatum.
+    </p>
+    <p id="target2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit molestiae harum, cupiditate esse pariatur eos beatae soluta fugiat aliquid nulla aspernatur quo sequi velit nostrum nam recusandae corporis sapiente distinctio.
+    </p>
+
+</body>
+
+</html>

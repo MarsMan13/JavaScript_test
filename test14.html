@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <title>test15</title>
     <style>
-        #monitor{
-            width: 300px;
-            height: 100px;
-            background: #181818;
-            border: 3px solid green;
-        }
-        #target1 {
-            padding: 15px;
-            border: 1px solid gray;
+        body {
+            background: #333;
         }
 
-        #target2 {
-            padding: 2px;
-            border: 1px solid tomato;
+        #monitor {
+            overflow: auto;
+            color: #eee;
+            width: 350px;
+            height: 300px;
+            background: #181818;
+            border: 1px solid green;
         }
-        #target3{
-            padding: 15px;
-            border: 1px solid powderblue;
+
+        #target1 {
+            padding: 25px;
+            display: inline-block;
+            background: #ddd;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js">
@@ -29,28 +28,51 @@
 </head>
 
 <body>
-   <div id="monitor">
-       
-   </div>
-   <hr>
-    
-    
-    
-    <button type="button" id="button1">Button</button>
-    <img id="img1" src="aidfl.jpg" alt="img">
-    
+    <div id="monitor">
+
+    </div>
+    <hr>
+
+    <div class="targets">
+        <div id="target1">
+            target1
+        </div>
+
+    </div>
+    <a id="target2" style="color: green; text-decoration: none; display: block;" href="https://www.naver.com">NAVER</a>
+
     <script>
-        $('#button1').click(function(){
-            alert("check1");
+        function printing(event) {
+            var str = "";
+            str += "#" + $(event.target).attr('id') + " " + event.type;
+            $('#monitor').append(str);
+            $('#monitor').append('<br>');
+        }
+        
+        
+        $('#target1').on({
+            "mouseenter click": function(event){
+                console.log("check");
+                printing(event);
+            },
+            "mouseleave": function(event){
+                printing(event);
+            }
         });
-        /*
-        $('#button1').hover(function(){
-            alert('check2');
+        
+        $('#target2').click(function(event){
+            event.preventDefault();  
         })
-        */
-        $('#img1').error
         
     </script>
-    
+
 </body>
 </html>
+
+
+
+
+
+
+
+
