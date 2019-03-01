@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test17</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(function(){
+            $(document).delegate('.targets', 'click', function(){
+                alert('check');
+            })
+        });
+    </script>
+
+</head>
+<body>
+    <div id="div1">
+        <button class="targets" type="button">button</button>
+        
+    </div>
+</body>
+</html>

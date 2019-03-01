@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>effectMethod</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#btn1').click(function() {
+                $('.box1').slideToggle(1500, 'swing', function() {
+                    
+                })
+            });
+            
+            $('#btn2').click(function(){
+                $('.box1').fadeTo(1500, 0.5, function(){});
+            })
+        });
+    </script>
+
+</head>
+
+<body>
+   <button type="button" id="btn1">Btn1</button>
+   <button type="button" id="btn2">Btn2</button>
+    <div class="box1" style="display: none;">
+        hello World
+    </div>
+
+</body>
+</html>

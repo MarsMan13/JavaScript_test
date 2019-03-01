@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>textUpperLower</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            
+            $('.text').css('font-size', "14px");
+            
+            $('.btn').on('click', zoomInOut);
+            
+            function zoomInOut(){
+                if($(this).hasClass('Out')){
+                    $('.text').css('font-size', $('.text').css('font-size'));
+                }
+                else if($(this).hasClass('default')){
+                    $('.text').css('font-size', $('.text').css('font-size'));
+                }
+                else if($(this).hasClass('In')){
+                    $('.text').css('font-size', $('.text').css('font-size'));
+                }
+                console.log('check');
+                
+            }
+            
+            
+            
+        });
+    
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <button id="target1" type="button" class="btn Out">-</button>
+        <button id="target2" type="button" class="btn default">100%</button>
+        <button id="target3" type="button" class="btn In">+</button>
+    </div>
+    <div class="text" style="padding:20px;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis magni aut, natus dolores aspernatur itaque optio explicabo rem sequi quae adipisci quidem doloremque architecto mollitia voluptate fuga odit voluptates omnis.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis magni aut, natus dolores aspernatur itaque optio explicabo rem sequi quae adipisci quidem doloremque architecto mollitia voluptate fuga odit voluptates omnis.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis magni aut, natus dolores aspernatur itaque optio explicabo rem sequi quae adipisci quidem doloremque architecto mollitia voluptate fuga odit voluptates omnis.
+    </div>
+
+</body>
+</html>
