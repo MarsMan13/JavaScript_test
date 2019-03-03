@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scrollControl1</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn1').on('click', function(){
+                $('div').animate({marginLeft:"+=50"}, 10); 
+            });  
+        });
+    </script>
+    <style>
+        div{
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum itaque optio reiciendis rem dolorum ut excepturi ipsam! Quis itaque incidunt possimus veritatis laudantium doloribus suscipit! Suscipit neque facere possimus eveniet?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex architecto, incidunt veritatis placeat ipsa. Optio voluptas ullam reprehenderit mollitia, officia dolores libero expedita? Distinctio, odio. Laudantium laboriosam mollitia blanditiis itaque?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam provident quam dignissimos unde maxime doloremque distinctio ullam nam asperiores natus non aliquid neque, corrupti, laboriosam, sunt repellat. Maiores, debitis eos!
+    </div>
+    <hr>
+    <div>
+        <button type="button" id="btn1">btn</button>
+
+    </div>
+</body>
+</html>
